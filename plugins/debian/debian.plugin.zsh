@@ -54,7 +54,7 @@ if [[ $use_sudo -eq 1 ]]; then
     # acs ... | ail
     alias ail="sed -e 's/  */ /g' -e 's/ *//' | cut -s -d ' ' -f 1 | "' xargs sudo $apt_pref install'
     alias ap='sudo $apt_pref purge'
-    alias ar='sudo $apt_pref remove'
+    alias arm='sudo $apt_pref remove'
 
     # apt-get only
     alias ads='sudo apt-get dselect-upgrade'
@@ -94,7 +94,7 @@ else
         print "$cmd"
         eval "$cmd"
     }
-    ar() {
+    arm() {
         cmd="su -lc '$apt_pref -P remove $@' root"
         print "$cmd"
         eval "$cmd"
@@ -140,7 +140,7 @@ apt_pref_compdef ag  "upgrade"
 apt_pref_compdef ai  "install"
 apt_pref_compdef ail "install"
 apt_pref_compdef ap  "purge"
-apt_pref_compdef ar  "remove"
+apt_pref_compdef arm  "remove"
 apt_pref_compdef ads "dselect-upgrade"
 
 # Misc. #####################################################################
