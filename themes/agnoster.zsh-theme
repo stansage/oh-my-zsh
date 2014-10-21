@@ -26,7 +26,7 @@
 # A few utility functions to make it easy and re-usable to draw segmented prompts
 
 CURRENT_BG='NONE'
-SEGMENT_SEPARATOR=''
+SEGMENT_SEPARATOR='⮀'
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
@@ -141,7 +141,7 @@ prompt_hg() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment cyan black '%~'
+  prompt_segment cyan blue '%~'
 }
 
 # Virtualenv: current working virtualenv
