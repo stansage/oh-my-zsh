@@ -12,13 +12,28 @@ alias _='sudo'
 #alias g='grep -in'
 
 # Show history
-alias history='fc -l 1'
-
+if [ "$HIST_STAMPS" = "mm/dd/yyyy" ]
+then
+    alias history='fc -fl 1'
+elif [ "$HIST_STAMPS" = "dd.mm.yyyy" ]
+then
+    alias history='fc -El 1'
+elif [ "$HIST_STAMPS" = "yyyy-mm-dd" ]
+then
+    alias history='fc -il 1'
+else
+    alias history='fc -l 1'
+fi
 # List direcory contents
 alias lsa='ls -lah'
-alias l='ls -la'
-alias ll='ls -l'
-alias sl=ls # often screw this up
+alias l='ls -lah'
+alias ll='ls -lh'
+alias la='ls -lAh'
 
 alias afind='ack-grep -il'
+
+#alias apt-I='sudo apt-get install'
+#alias apt-S='apt-cache search'
 alias o='xdg-open'
+#alias adb='/media/home/share/android-sdk/platform-tools/adb'
+alias my-ip='wget -q -O- http://goobotool.appspot.com/myip | head -n1'
