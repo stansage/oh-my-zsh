@@ -182,3 +182,6 @@ build_prompt() {
 }
 
 PROMPT='%{%f%b%k%}$(build_prompt) '
+
+LS_COLORS=$LS_COLORS:'di=0;32:ln=0;37:'
+export LS_COLORS
