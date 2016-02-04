@@ -6,8 +6,7 @@ if [[ -x `which emerge` ]]; then
 
 	# emerge - https://dev.gentoo.org/~zmedico/portage/doc/man/emerge.1.html
 	#alias eupg='sudo pacman -Syu'        # Synchronize with repositories before upgrading packages that are out of date on the local system.
-
-	alias emeu='sudo  emerge --ask --update --newuse @world'
+	alias emeu='sudo emerge --ask --update --newuse --deep --with-bdeps=y @world'
 	alias emei='sudo emerge --ask'           # Install specific package(s) from the repositories
 
 fi
