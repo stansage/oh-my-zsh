@@ -34,6 +34,7 @@ alias afind='ack-grep -il'
 
 #alias apt-I='sudo apt-get install'
 #alias apt-S='apt-cache search'
-alias o='xdg-open'
+#alias o='xdg-open'
 #alias adb='/media/home/share/android-sdk/platform-tools/adb'
-alias my-ip='wget -q -O- http://goobotool.appspot.com/myip | head -n1'
+#alias my-ip='wget -q -O- http://goobotool.appspot.com/myip | head -n1'
+
